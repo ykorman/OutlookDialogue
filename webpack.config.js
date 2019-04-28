@@ -4,7 +4,7 @@ module.exports = {
     entry: {
         polyfill: 'babel-polyfill',
         app: './src/index.js',
-        'function': './function.js'
+        'functionFile': './function-file.js'
     },
     module: {
         rules: [
@@ -30,9 +30,9 @@ module.exports = {
             chunks: ['polyfill', 'app']
         }),
         new HtmlWebpackPlugin({
-            template: './function.html',
-            filename: 'function.html',
-            chunks: ['function']
+            template: './function-file.html',
+            filename: 'function-file.html',
+            chunks: ['functionFile']
         })
     ]
 };
